@@ -1,0 +1,134 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensures the body takes up the full viewport height */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(131,58,180);
+    background: linear-gradient(174deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    line-height: 1.65;
+    /* padding-bottom: 1000px; Removed the large padding */
+    display: flex;
+    flex-direction: column; /* Makes sure that the body content will stack vertically */
+}
+.container-satu {
+    width: 100%;
+    max-width: 1000px; /* Optional: maximum width to prevent it from growing too large */
+    margin: 50px auto;
+    border-radius: 20px;
+    padding: 20px 0 20px 0px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas: "side1 main side2";
+    gap: 20px;
+    background-color: #fff;
+}
+
+.kolom-utama {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 10px 5px 5px;
+}
+.kolom-utama p {
+    text-align: center;
+}
+.title{
+    width: 670px;
+    height: min-content;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 80px;
+    background: linear-gradient(141deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sidebar-satu, .sidebar-dua {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+    padding: 20px;
+    border-radius: 20px; /* Unified border-radius */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow for a 3D effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.sidebar-satu h3, .sidebar-dua h3 {
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.sidebar-satu {
+    margin-left: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.sidebar-dua {
+    margin-right: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+.sidebar-satu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sidebar-satu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background for links */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-satu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Brighter background on hover */
+    color: #000; /* Text turns black on hover */
+}
+
+
+.sidebar-dua p {
+    color: white;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+img {
+    border-radius: 100%;
+    width: 350px;
+    height: auto;
+}
+
+.sidebar-satu:hover, .sidebar-dua:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+}
+
+
